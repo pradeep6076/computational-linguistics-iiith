@@ -1,22 +1,46 @@
 <html>
   <head>
+         <meta charset="UTF-8" />
     <script src="Functions.js"></script>
   </head>
   <body>
     
     <center>  <h1>Experiment</h1>
       <br /><br /><br /><br />
-       <select style="width: 150px; height: 30px;"
-        ><option value="select">---Select Language--</option>
+       <select style="width: 150px; height: 30px;"  id="choose" onchange="choose()"><option value="select">---Select Language--</option>
         <option value="English">English</option>
         <option value="Hindi">Hindi</option>
       </select>
-      <br /><br /><br />
-      <h3 style="color: blue;">
-        Form a sentence (Declarative or Interrogative or any other type) from
-        the given words<br />
-        (select the buttons in proper order)
-      </h3><button onclick="check()">ANSWER</button>
+<br><br>
+<div id="eng" style="display: none;" >
+        <h3 id="result" style="color: blue;"></h3>
+        <button>did</button>&nbsp;&nbsp;&nbsp;
+        <button>market</button>&nbsp;&nbsp;&nbsp;
+        <button>go</button>&nbsp;&nbsp;&nbsp;
+        <button>he</button>&nbsp;&nbsp;&nbsp;
+        <button>to</button>&nbsp;&nbsp;&nbsp;<br /><br />
+
+       
+      </div>
+
+      <div id="hin"  style="display: none;">
+        <h3 id="result1" style="color: blue;"></h3>
+        <button>है</button>&nbsp;&nbsp;&nbsp;
+        <button>किताब</button>&nbsp;&nbsp;&nbsp;
+        <button>लाल</button>&nbsp;&nbsp;&nbsp;
+        <button>वहाँ</button>&nbsp;&nbsp;&nbsp;
+        <button>एक</button>&nbsp;&nbsp;&nbsp;<br /><br />
+
+        
+      </div>
+
+      <br /><br /><br /></h3><button onclick="check()">ANSWER</button>
     </center>
+    <p id="output"></p>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    
+    
 </body>
 </html>

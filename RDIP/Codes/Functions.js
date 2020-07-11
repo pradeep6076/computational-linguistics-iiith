@@ -1,33 +1,17 @@
 function check()
 {
-var English = '{"english":[' +
-
+  var English =
+    '{"english":[' +
     '{"a":"John ate an apple before afternoon <br>","b":"before afternoon John ate an apple <br>","c":"John before afternoon ate an apple <br>" },' +
-    '{"a":"some students like to study in the night<br>","b":"at night some students like to study <br>" },' +
-    '{"a":"John and Mary went to church <br>","b":"Mary and John went to church<br>" },' +
-    '{"a":"John went to church after eating <br>","b":"after eating John went to church <br>" ,"c":"John after eating went to church<br>"},' +
-    '{"a":"did he go to market <br>","b":"he did go to market <br>"},'+
-    '{"a":"the woman who called my sister sells cosmetics<br>","b":"the woman who sells cosmetics called my sister<br>" ,"c":"my sister who sells cosmetics called the woman<br>","d":"my sister who called the woman sells cosmetics"},'+
+    '{"a":"some students like to study in the night<br>","b":"at night some students like to study" },' +
+    '{"a":"John and Mary went to church <br>","b":"Mary and John went to church" },' +
+    '{"a":"John went to church after eating <br>","b":"after eating John went to church <br>" ,"c":"John after eating went to church"},' +
+    '{"a":"John ate an apple so did she <br>","b":"she ate an apple so did John" },' +
     '{"a":"John goes to the library and studies <br>","b":"John studies and goes to the library<br>" },' +
-    '{"a":"John ate an apple so did she <br>","b":"she ate an apple so did John" },' + 
-'{"a":"the teacher returned the book after she noticed the error<br>",
-"b":"the teacher noticed the error after she returned the book<br>",
-"c":"after the teacher returned the book she noticed the error <br>",
-"d":"after the teacher noticed the error she returned the book <br>",
-"e":"she returned the book after the teacher noticed the error <br>",
-"f":"she noticed the error after the teacher returned the book <br>",
-"g":"after she returned the book the teacher noticed the error <br>",
-"h":"after she noticed the error the teacher returned the book <br>"},'+
+    '{"a":"the teacher returned the book after she noticed the error <br>","b":"the teacher noticed the error after she returned the book<br>","c":"after the teacher returned the book she noticed the error<br>","d":"after the teacher noticed the error she returned the book<br>","e":"she returned the book after the teacher noticed the error<br>","f":"she noticed the error after the teacher returned the book<br>","g":" after she returned the book the teacher noticed the error<br>","h":" after she noticed the error the teacher returned the book<br>"},' +
+    '{"a":"the woman who called my sister sells cosmetics<br>","b":"the woman who sells cosmetics called my sister<br>" ,"c":"my sister who sells cosmetics called the woman<br>","d":"my sister who called the woman sells cosmetics"}]}';
 
-'{"a":"I told her that I bought a book yesterday<br>",
-"b":"I told her yesterday that I bought a book<br>",
-"c":"yesterday I told her that I bought a book <br>",
-"d":"I bought a book that I told her yesterday <br>",
-"e":"I bought a book yesterday that I told her <br>",
-"f":"yesterday I bought a book that I told her <br>"}]}';
-
-
-
+   
   obj = JSON.parse(English);
   document.getElementById("output").innerHTML =
     obj.english[0].a + " " + obj.english[0].b + obj.english[0].c;
@@ -40,7 +24,8 @@ var English = '{"english":[' +
     obj.english[3].a + " " + obj.english[3].b + " " + obj.english[3].c;
   document.getElementById("output4").innerHTML =
     obj.english[4].a + " " + obj.english[4].b;
-  document.getElementById("output5").innerHTML =
+
+ /* document.getElementById("output5").innerHTML =
     
     obj.english[5].a +
     " " +
@@ -284,6 +269,30 @@ document.getElementById("output9").innerHTML =
     " " +
     obj.hindi[6].g +
     " " +
-    obj.hindi[6].h ;
+    obj.hindi[6].h ; */
+
+
+
 }
+
+
+
+
+function choose() {
+  var x = document.getElementById("choose").value;
+  if (x == "English") {
+    document.getElementById("result").innerHTML =
+      "Form a sentence (Declarative or Interrogative or any other type) from the given words<br />(select the buttons in proper order)";
+
+    document.getElementById("eng").style.display = "block";
+    document.getElementById("hin").style.display = "none";
+  } else {
+    document.getElementById("result1").innerHTML =
+      "Form a sentence (Declarative or Interrogative or any other type) from the given words<br />(select the buttons in proper order)";
+
+    document.getElementById("hin").style.display = "block";
+    document.getElementById("eng").style.display = "none";
+  }
+}
+
 
