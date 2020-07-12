@@ -281,18 +281,75 @@ document.getElementById("output9").innerHTML =
 function choose() {
   var x = document.getElementById("choose").value;
   if (x == "English") {
+    document.getElementById("randomeng").innerHTML = "";
+
     document.getElementById("result").innerHTML =
       "Form a sentence (Declarative or Interrogative or any other type) from the given words<br />(select the buttons in proper order)";
 
     document.getElementById("eng").style.display = "block";
     document.getElementById("hin").style.display = "none";
+﻿var  english= [
+    ['John', 'ate', 'an', 'apple', 'before', 'afternoon'],
+    ['some', 'students', 'like', 'to', 'study', 'at', 'night'],
+    ['John', 'and', 'Mary', 'went', 'to', 'church'],
+    ['John', 'went', 'to', 'church', 'after', 'eating'],
+    ['did', 'he', 'go', 'to', 'market'],
+    ['the', 'woman', 'who', 'called', 'my', 'sister', 'sells', 'cosmetics'],
+    ['John', 'goes', 'to', 'the', 'library', 'and', 'studies'],
+    ['John', 'ate', 'an', 'apple', 'so', 'did', 'she'],
+    ['the', 'teacher', 'returned', 'the', 'book', 'after', 'she', 'noticed', 'the', 'error'],
+    ['I', 'told', 'her', 'that', 'I', 'bought', 'a', 'book', 'yesterday']
+];
+
+var s= english[Math.floor(Math.random() * english.length)];
+    var randomarray= randomize(s);
+    for (var x= 0; x < randomarray.length; x++) {
+        document.getElementById("randomeng").innerHTML += "<button class='random'>" + randomarray[x] + "</button>";
+    }
+
   } else {
+    document.getElementById("randomhin").innerHTML = "";
+
     document.getElementById("result1").innerHTML =
       "Form a sentence (Declarative or Interrogative or any other type) from the given words<br />(select the buttons in proper order)";
 
     document.getElementById("hin").style.display = "block";
     document.getElementById("eng").style.display = "none";
+
+
+var hindi= [
+    ['राम', 'और', 'श्याम', 'बाजार', 'गयें'],
+    ['राम', 'सोया', 'और', 'श्याम', 'भी'],
+    ['मैंने', 'उसे', 'बताया', 'कि', 'राम', 'सो', 'रहा', 'है'],
+    ['राम', 'खाकर', 'सोया'],
+    ['बिल्लियों', 'को', 'मारकर', 'कुत्ता', 'सो', 'गया'],
+    ['एक', 'लाल', 'किताब', 'वहाँ', 'है'],
+    ['एक', 'बड़ी', 'सी', 'किताब', 'वहाँ', 'है']
+];
+
+var s= hindi[Math.floor(Math.random() * hindi.length)];
+    var randomarray= randomize(s);
+    for (var x= 0; x < randomarray.length; x++) {
+        document.getElementById("randomhin").innerHTML += "<button class='random'>" + randomarray[x] + "</button>";
+    }
+
+
   }
 }
 
+function randomize(arr)
+{
+var len=arr.length;
+var t; 
+var i;
+while(len>0)
+{
+  i=Math.floor(Math.random() * len);
+  len--;
+  t=arr[len];
+  arr[len]=arr[i];
+arr[i]=t;
+}
+return arr;
+}
 
