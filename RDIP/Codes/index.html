@@ -1,37 +1,27 @@
+<!DOCTYPE html>
 <html>
-  <head>
-         <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="style.css">
+	<meta encoding="UTF-8" charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="Functions.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="Functions.js"></script>
-  </head>
-  <body>
-    
-    <center>  <h1>Experiment</h1>
-      <br /><br /><br /><br />
-       <select style="width: 150px; height: 30px;"  id="choose" onchange="choose()"><option value="select">---Select Language--</option>
-        <option value="English">English</option>
-        <option value="Hindi">Hindi</option>
-      </select>
-<br><br>
-<div id="eng" style="display: none;" >
-        <h3 id="result" style="color: blue;"></h3>
-       <p id="randomeng"></p>
-      </div>
+<body>
+<div class="container">
+<h2>Experiment</h2><br><br>
+	<div class="selectDiv" >
 
-      <div id="hin"  style="display: none;">
-        <h3 id="result1" style="color: blue;"></h3>
+<select id="choose" onchange="choose()">
+<option value="null">---Select Language---</option>
+<option  value="English">English</option>
+<option  value="Hindi">Hindi</option>
+</select>
+<p id="displayText"></p>
+<p id="random"></p>
+<p id="second"></p>
+<p id="form"></p>
+<p id="reform"></p>
 
-        <p id="randomhin"></p>
-      </div>
-
-      
-    </center>
-    <p id="output"></p>
-    <p id="output1"></p>
-    <p id="output2"></p>
-    <p id="output3"></p>
-    
-    
+	</div>
 </body>
 </html>
