@@ -1,4 +1,5 @@
 var shuffle="";
+var display=[];
 function choose(){
   document.getElementById("random").innerHTML="";
 document.getElementById("second").innerHTML="";
@@ -23,6 +24,8 @@ message="Form a sentence (Declarative or Interrogative or any other type) from t
     ['the', 'teacher', 'returned', 'the', 'book', 'after', 'she', 'noticed', 'the', 'error'],
     ['I', 'told', 'her', 'that', 'I', 'bought', 'a', 'book', 'yesterday']
 ];
+display=[];
+document.getElementById("correctnessBtn").innerHTML="";
 
 var index= english[Math.floor(Math.random() * english.length)];
  shuffle= shuffles(index);
@@ -42,6 +45,8 @@ var hindi= [
     ['एक', 'लाल', 'किताब', 'वहाँ', 'है'],
     ['एक', 'बड़ी', 'सी', 'किताब', 'वहाँ', 'है']
 ];
+display=[];
+document.getElementById("correctnessBtn").innerHTML="";
 
 var index= hindi[Math.floor(Math.random() * hindi.length)];
  shuffle= shuffles(index);
@@ -55,8 +60,16 @@ function my(x) {
 document.getElementById("second").innerHTML="Formed Sentence (after selecting words):";	
   var y = document.getElementById(x);
     y.style.display = "none";
-   document.getElementById("form").innerHTML= document.getElementById(x).textContent;
+display.push(document.getElementById(x).textContent);
+finalSentence= display.join(' ');
+document.getElementById("form").innerHTML= finalSentence;
+
+   
    document.getElementById("reform").innerHTML= "<button id='reform' onclick='resets()'>"+"Re-form the sentence"+"</button>"
+    if(display.length == shuffle.length){
+    			document.getElementById("correctnessBtn").innerHTML = "<button class='correctBtn'>" +"Correct"+ "</button>";
+    }
+
   }
 function shuffles(arr)
 {
@@ -75,6 +88,7 @@ return arr;
 }
 function resets()
 {
+display=[];
 document.getElementById("random").innerHTML="";
 document.getElementById("second").innerHTML="";
 document.getElementById("reform").innerHTML="";
