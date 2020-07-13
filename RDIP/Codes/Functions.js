@@ -1,3 +1,4 @@
+var shuffle="";
 function choose(){
   document.getElementById("random").innerHTML="";
 document.getElementById("second").innerHTML="";
@@ -24,7 +25,7 @@ message="Form a sentence (Declarative or Interrogative or any other type) from t
 ];
 
 var index= english[Math.floor(Math.random() * english.length)];
-var shuffle= shuffles(index);
+ shuffle= shuffles(index);
 for (var i = 0; i < shuffle.length; i++) {
 document.getElementById("random").innerHTML += "<button id='"+i+"' class='wordBtn' onclick='my("+i+")'>" + shuffle[i] + "</button>";
 }
@@ -43,7 +44,7 @@ var hindi= [
 ];
 
 var index= hindi[Math.floor(Math.random() * hindi.length)];
-var shuffle= shuffles(index);
+ shuffle= shuffles(index);
 for (var i = 0; i < shuffle.length; i++) {
 document.getElementById("random").innerHTML += "<button id='"+i+"' class='wordBtn' onclick='my("+i+")'>" + shuffle[i] + "</button>";
 }
@@ -55,7 +56,7 @@ document.getElementById("second").innerHTML="Formed Sentence (after selecting wo
   var y = document.getElementById(x);
     y.style.display = "none";
    document.getElementById("form").innerHTML= document.getElementById(x).textContent;
-   document.getElementById("reform").innerHTML= "<button>"+"Re-form the sentence"+"</button>"
+   document.getElementById("reform").innerHTML= "<button id='reform' onclick='resets()'>"+"Re-form the sentence"+"</button>"
   }
 function shuffles(arr)
 {
@@ -72,6 +73,17 @@ arr[i]=t;
 }
 return arr;
 }
+function resets()
+{
+document.getElementById("random").innerHTML="";
+document.getElementById("second").innerHTML="";
+document.getElementById("reform").innerHTML="";
+document.getElementById("form").innerHTML=""; 
+for (var i = 0; i < shuffle.length; i++) {
+document.getElementById("random").innerHTML += "<button id='"+i+"' class='wordBtn' onclick='my("+i+")'>" + shuffle[i] + "</button>";
+	}
+}
+
 
 
 
