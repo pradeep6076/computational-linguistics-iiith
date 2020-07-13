@@ -3,12 +3,13 @@
 <meta encoding="UTF-8" charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css">
 <script type="text/javascript" src="Functions.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
-<div class="container">
 <h2>Experiment</h2><br><br>
+<div class="container">
+
 	<div class="selectDiv" >
 
 <select    id="choose" onchange="choose()">
@@ -16,11 +17,17 @@
 <option  value="English">English</option>
 <option  value="Hindi">Hindi</option>
 </select>
-<p style="color: blue;"  id="displayText"></p>
+<br><br><br>
+<p   id="displayText"></p>
+<p   id="displayText2"></p>
+<br><br>
 <p id="random"></p>
-<p style="color: blue;"  id="second"></p>
-<p style="color: blue;"  id="form" ></p>
+<p style="color:darkblue;font-size:20px"  id="second"></p>
+<p  id="form" ></p>
 <p id="reform"></p>
+<br>
+<br>
+
 <p id="correctnessBtn"></p>
 <p id="correct"></p>
 <p id="wrong"></p>

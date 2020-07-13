@@ -32,13 +32,16 @@ document.getElementById("getAnswer").innerHTML="";
 document.getElementById("list").innerHTML="";
 document.getElementById("hide").innerHTML="";
 document.getElementById("getAnswer1").innerHTML="";
+document.getElementById("correctnessBtn").innerHTML="";
 
 
 var x= document.getElementById("choose").value;
 var message="";
+var m2="";
 if(x=='English')
 {
-message="Form a sentence (Declarative or Interrogative or any other type) from the given words<br>(select the buttons in proper order)";
+message="Form a sentence (Declarative or Interrogative or any other type) from the given words<br>";
+m2="(select the buttons in proper order)";
 ﻿var  english= [
     ['John', 'ate', 'an', 'apple', 'before', 'afternoon'],
     ['some', 'students', 'like', 'to', 'study', 'at', 'night'],
@@ -62,7 +65,7 @@ document.getElementById("random").innerHTML += "<button id='"+i+"' class='wordBt
 }
 else if(x=='Hindi'){
 message="Form a sentence (Declarative or Interrogative or any other type) from the given words <br>(select the buttons in proper order)";
-
+m2="(select the buttons in proper order)";
 var hindi= [
     ['राम', 'और', 'श्याम', 'बाजार', 'गयें'],
     ['राम', 'सोया', 'और', 'श्याम', 'भी'],
@@ -82,6 +85,7 @@ document.getElementById("random").innerHTML += "<button id='"+i+"' class='wordBt
 }
 }
 document.getElementById("displayText").innerHTML=message;
+document.getElementById("displayText2").innerHTML=m2;
 }
 function my(x) {
 document.getElementById("second").innerHTML="Formed Sentence (after selecting words):";	
@@ -192,9 +196,11 @@ document.getElementById("wrong").innerHTML="";
 document.getElementById("correct").innerHTML="Correct answer"+" "+"<i class='fa fa-smile-o' aria-hidden='true'></i>";
 } else{
 document.getElementById("correct").innerHTML="";
-document.getElementById("wrong").innerHTML="Wrong answer"+" "+"<i class='fa fa-frown-o' aria-hidden='true'></i>";
+document.getElementById("wrong").innerHTML="Wrong answer!!!"+" "+"<i class='fa fa-frown-o' aria-hidden='true'></i>";
 document.getElementById("getAnswer").innerHTML="<button class='correctAnsBtn' onclick='get()'>"+"GET CORRECT SENTENCE"+"</button>";
-
+document.getElementById("getAnswer1").innerHTML="";
+document.getElementById("hide").innerHTML="";
+ document.getElementById("list").innerHTML="";
 }
 }
 function get(){
@@ -264,7 +270,7 @@ if (z==1)
 	//alert("Found correct sentences :"+correctSentences[j]);
     document.getElementById("list").innerHTML+=correctSentences[j].join(" ")+"<br>";
   }
-  document.getElementById("hide").innerHTML="<button class='hide' onclick='hideAnswers()'>"+ "hide the correct sentence" + "</button>";
+  document.getElementById("hide").innerHTML="<button class='hide' onclick='hideAnswers()'>"+ "Hide the correct sentence" + "</button>";
   document.getElementById("getAnswer").innerHTML="";
 }
 }
@@ -331,7 +337,7 @@ if(answerExists == ""){
 	//alert("Found correct sentences :"+correctSentences[j]);
     document.getElementById("list").innerHTML+=correctSentences[j].join(" ")+"<br>";
   }
- document.getElementById("hide").innerHTML="<button class='hide' onclick='hideAnswers()'>"+ "hide the correct sentence" + "</button>";
+ document.getElementById("hide").innerHTML="<button class='hide' onclick='hideAnswers()'>"+ "Hide the correct sentence" + "</button>";
   document.getElementById("getAnswer").innerHTML="";
 }	
 }
@@ -341,6 +347,7 @@ function hideAnswers(){
 	var x=document.getElementById("list");
 	x.style.display="none";
 	document.getElementById("hide").innerHTML="";
+	document.getElementById("getAnswer").innerHTML="";
 
 	document.getElementById("getAnswer1").innerHTML="<button class='correctAnsBtn' onclick='showAnswers()'>"+"Get Answers"+"</button>";
 }
@@ -349,7 +356,7 @@ function showAnswers(){
 	var v=document.getElementById("list");
 	v.style.display="block";
 	document.getElementById("getAnswer1").innerHTML="";
-  document.getElementById("hide").innerHTML="<button class='hide' onclick='hideAnswers()'>"+ "hide the correct sentence" + "</button>";
+  document.getElementById("hide").innerHTML="<button class='hide' onclick='hideAnswers()'>"+ "Hide the correct sentence" + "</button>";
 
 }
 

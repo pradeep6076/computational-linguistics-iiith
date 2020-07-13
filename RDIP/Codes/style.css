@@ -11,5 +11,102 @@
 
 
 .wordBtn{
-	margin-right: 5px;
-	margin-left: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+
+
+}
+.correctAnsBtn, .hide{
+  background-color: darkblue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#displayText
+{
+color:darkblue;
+
+	font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+
+}
+#displayText2
+{
+color:blue;
+
+	font-size: 17px;
+  font-family: "Lucida Console", Courier, monospace;
+
+}
+
+#choose{
+	width:200px;
+	text-align: center;
+	padding:5px;
+	font-size: 19px;
+}
+#form
+{
+
+
+	font-size: 30px;
+
+font-family: "Times New Roman", Times, serif;
+}
+#reform
+{
+
+
+  background-color: SlateBlue
+  padding: 12px 20px;
+  text-align: center;
+  
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+
+}
+.correctBtn
+{
+
+  background-color: Tomato
+  padding: 12px 20px;
+  text-align: center;
+
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+}
+#correct{
+  font-size: 30px;
+  color: green;
+  font-weight: bold;
+}
+
+#wrong{
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
