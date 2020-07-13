@@ -341,6 +341,7 @@ function hideAnswers(){
 	var x=document.getElementById("list");
 	x.style.display="none";
 	document.getElementById("hide").innerHTML="";
+
 	document.getElementById("getAnswer1").innerHTML="<button class='correctAnsBtn' onclick='showAnswers()'>"+"Get Answers"+"</button>";
 }
 
