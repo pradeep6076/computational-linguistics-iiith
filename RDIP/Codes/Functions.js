@@ -11,12 +11,24 @@ var se8=[["John", "ate", "an", "apple", "so", "did", "she"],["she", "ate", "an",
 var se9=[["the", "teacher", "returned", "the", "book", "after", "she", "noticed", "the", "error"],["the", "teacher", "noticed", "the", "error", "after", "she", "returned", "the", "book"],["after", "the", "teacher", "returned", "the", "book", "she", "noticed", "the", "error"],["after", "the", "teacher", "noticed", "the", "error", "she", "returned", "the", "book"],["she", "returned", "the", "book", "after", "the", "teacher", "noticed", "the", "error"],["she", "noticed", "the", "error", "after", "the", "teacher", "returned", "the", "book"],["after", "she", "returned", "the", "book", "the", "teacher", "noticed", "the", "error"],["after", "she", "noticed", "the", "error", "the", "teacher", "returned", "the", "book"]];
 var se10=[["I", "told", "her", "that", "I", "bought", "a", "book", "yesterday"],["I", "told", "her", "yesterday", "that", "I", "bought", "a", "book"],["yesterday", "I", "told", "her", "that", "I", "bought", "a", "book"],["I", "bought", "a", "book", "that", "I", "told", "her", "yesterday"],["I", "bought", "a", "book", "yesterday", "that", "I", "told", "her"],["yesterday", "I", "bought", "a", "book", "that", "I", "told", "her"]];
 var englishArray=[se1,se2,se3,se4,se5,se6,se7,se8,se8,se9,se10];
+var sh1=[["राम", "और", "श्याम", "बाजार", "गयें"],["राम", "और", "श्याम", "गयें", "बाजार"],["बाजार", "गयें", "राम", "और", "श्याम"],["गयें", "बाजार", "राम", "और", "श्याम"]]
+var sh2=[["राम", "सोया", "और", "श्याम", "भी"],["श्याम", "सोया", "और", "राम", "भी"],["सोया", "श्याम", "और", "राम", "भी"],["सोया", "राम", "और", "श्याम", "भी"]]
+var sh3=[['मैंने', 'उसे', 'बताया', 'कि', 'राम', 'सो', 'रहा', 'है'],['मैंने', 'उसे', 'बताया', 'कि', 'सो', 'रहा', 'है', 'राम'],['उसे', 'मैंने', 'बताया', 'कि', 'राम', 'सो', 'रहा', 'है'],['उसे', 'मैंने', 'बताया', 'कि', 'सो', 'रहा', 'है', 'राम'],['मैंने', 'बताया', 'उसे', 'कि', 'राम', 'सो', 'रहा', 'है'],['मैंने', 'बताया', 'उसे', 'कि', 'सो', 'रहा', 'है', 'राम'],['उसे', 'बताया', 'मैंने', 'कि', 'राम', 'सो', 'रहा', 'है'],['उसे', 'बताया', 'मैंने', 'कि', 'सो', 'रहा', 'है', 'राम'],['बताया', 'मैंने', 'उसे', 'कि', 'राम', 'सो', 'रहा', 'है'],['बताया', 'मैंने', 'उसे', 'कि', 'सो', 'रहा', 'है', 'राम'],['बताया', 'उसे', 'मैंने', 'कि', 'राम', 'सो', 'रहा', 'है'],['बताया', 'उसे', 'मैंने', 'कि', 'सो', 'रहा', 'है', 'राम']];
+var sh4=[['राम', 'खाकर', 'सोया'],['खाकर', 'राम', 'सोया'],['राम', 'सोया', 'खाकर'],['खाकर', 'सोया', 'राम'],['सोया', 'राम', 'खाकर'],['सोया', 'खाकर', 'राम']];
+var sh5=[['बिल्लियों', 'को', 'मारकर', 'कुत्ता', 'सो', 'गया'],['मारकर', 'बिल्लियों', 'को', 'कुत्ता', 'सो', 'गया'],['बिल्लियों', 'को', 'मारकर', 'सो', 'गया', 'कुत्ता'],['मारकर', 'बिल्लियों', 'को', 'सो', 'गया', 'कुत्ता'],['कुत्ता', 'सो', 'गया', 'बिल्लियों', 'को', 'मारकर'],['कुत्ता', 'सो', 'गया', 'मारकर', 'बिल्लियों', 'को'],['सो', 'गया', 'कुत्ता', 'बिल्लियों', 'को', 'मारकर'],['सो', 'गया', 'कुत्ता', 'मारकर', 'बिल्लियों', 'को']];
+var sh6=[['एक', 'लाल', 'किताब', 'वहाँ', 'है'],['एक', 'लाल', 'किताब', 'है', 'वहाँ'],['वहाँ', 'है', 'एक', 'लाल', 'किताब'],['है', 'वहाँ', 'एक', 'लाल', 'किताब']];
+var sh7=[['एक', 'बड़ी', 'सी', 'किताब', 'वहाँ', 'है'],['एक', 'बड़ी', 'सी', 'किताब', 'है', 'वहाँ'],['बड़ी', 'सी', 'एक', 'किताब', 'वहाँ', 'है'],['बड़ी', 'सी', 'एक', 'किताब', 'है', 'वहाँ'],['वहाँ', 'है', 'एक', 'बड़ी', 'सी', 'किताब'],['वहाँ', 'है', 'बड़ी', 'सी', 'एक', 'किताब'],['है', 'वहाँ', 'एक', 'बड़ी', 'सी', 'किताब'],['है', 'वहाँ', 'बड़ी', 'सी', 'एक', 'किताब']];
+var hindiArray=[sh1,sh2,sh3,sh4,sh5,sh6,sh7];
+var correctSentences=[];
 var finalSentence="";
 function choose(){
   document.getElementById("random").innerHTML="";
 document.getElementById("second").innerHTML="";
 document.getElementById("reform").innerHTML="";
 document.getElementById("form").innerHTML="";
+document.getElementById("wrong").innerHTML="";
+document.getElementById("correct").innerHTML="";
+document.getElementById("getAnswer").innerHTML="";
 
 
 var x= document.getElementById("choose").value;
@@ -105,14 +117,21 @@ document.getElementById("random").innerHTML="";
 document.getElementById("second").innerHTML="";
 document.getElementById("reform").innerHTML="";
 document.getElementById("form").innerHTML=""; 
+document.getElementById("wrong").innerHTML="";
+document.getElementById("correct").innerHTML="";
+document.getElementById("getAnswer").innerHTML="";
+	
 for (var i = 0; i < shuffle.length; i++) {
 document.getElementById("random").innerHTML += "<button id='"+i+"' class='wordBtn' onclick='my("+i+")'>" + shuffle[i] + "</button>";
 	}
 }
 
 function check(){
+var language=document.getElementById("choose").value;
 
 var flag=false;
+if(language=='English'){
+	
 for(var x=0; x<englishArray.length; x++){
 if(flag==true){
 break;
@@ -134,12 +153,40 @@ break;
 }
 }
 }
-if(flag == true){
-document.getElementById("wrongA").innerHTML="";
-document.getElementById("correctA").innerHTML="Correct answer"+" "+"<i class='fa fa-smile-o' aria-hidden='true'></i>";
+}
+if(language=='Hindi'){
+	
+for(var x=0; x<hindiArray.length; x++){
+if(flag==true){
+break;
 } else{
-document.getElementById("correctA").innerHTML="";
-document.getElementById("wrongA").innerHTML="Wrong answer"+" "+"<i class='fa fa-frown-o' aria-hidden='true'></i>";
+for(var y=0; y<hindiArray[x].length; y++){
+if(flag==true){
+break;
+} else{
+for(var j=0; j<hindiArray[x][y].length; j++){
+
+if(display[j] == hindiArray[x][y][j]){
+flag=true;
+} else{
+flag=false;
+break;
+}
+}
+}
+}
+}
+}
+}
+
+if(flag == true){
+document.getElementById("wrong").innerHTML="";
+document.getElementById("correct").innerHTML="Correct answer"+" "+"<i class='fa fa-smile-o' aria-hidden='true'></i>";
+} else{
+document.getElementById("correct").innerHTML="";
+document.getElementById("wrong").innerHTML="Wrong answer"+" "+"<i class='fa fa-frown-o' aria-hidden='true'></i>";
+document.getElementById("getAnswer").innerHTML="<button class='correctAnsBtn'>"+"GET CORRECT SENTENCE"+"</button>";
+
 }
 }
 
